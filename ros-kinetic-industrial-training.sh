@@ -26,7 +26,8 @@ echo "source /opt/ros/kinetic/setup.bash" >> $HOME/.bashrc
 source $HOME/.bashrc
 
 mkdir -p ros_libs/src
-git clone -b kinetic-devel https://github.com/ros-industrial/universal_robot.git ros_libs/src
+git clone -b kinetic-devel https://github.com/ros-industrial/universal_robot.git ros_libs/src/universal_robot
+git clone -b kinetic-devel https://github.com/ros-industrial/industrial_core.git ros_libs/src/industrial_core
 catkin build --workspace ros_libs
 echo "source $HOME/ros_libs/devel/setup.bash" >> $HOME/.bashrc
 source $HOME/.bashrc
