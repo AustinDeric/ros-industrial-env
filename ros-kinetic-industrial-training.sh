@@ -22,6 +22,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main"
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt update -y
 sudo apt install python-catkin-tools -y
+sudo apt install ros-kinetic-openni-camera ros-kinetic-openni-launch ros-kinetic-openni2-camera ros-kinetic-openni2-launch -y
 echo "source /opt/ros/kinetic/setup.bash" >> $HOME/.bashrc
 source $HOME/.bashrc
 
