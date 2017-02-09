@@ -26,17 +26,7 @@ sudo apt install ros-kinetic-openni-camera ros-kinetic-openni-launch ros-kinetic
 echo "source /opt/ros/kinetic/setup.bash" >> $HOME/.bashrc
 source $HOME/.bashrc
 
-mkdir -p ros_libs/src
-git clone -b kinetic-devel https://github.com/ros-industrial/universal_robot.git ros_libs/src/universal_robot
-git clone -b kinetic-devel https://github.com/ros-industrial/industrial_core.git ros_libs/src/industrial_core
-catkin build --workspace ros_libs
-echo "source $HOME/ros_libs/devel/setup.bash" >> $HOME/.bashrc
-source $HOME/.bashrc
-
-wget http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
-chmod +x qt-opensource-linux-x64-5.7.0.run
 sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial  
-sudo add-apt-repository ppa:levi-armstrong/ppa  
+sudo add-apt-repository ppa:levi-armstrong/ppa
 sudo apt update -y
 sudo apt install qt57creator-plugin-ros -y
-./qt-opensource-linux-x64-5.7.0.run
