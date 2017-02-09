@@ -30,3 +30,9 @@ sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial
 sudo add-apt-repository ppa:levi-armstrong/ppa
 sudo apt update -y
 sudo apt install qt57creator-plugin-ros -y
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+#then install clipboardy extension
